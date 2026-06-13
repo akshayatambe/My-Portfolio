@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Changed background to clean white and text to deep gray/off-black */
+  background-color: #ffffff;
+  color: #2d3748;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Replaced the bright purple/pink gradient text with the 
+  refined, deep maroon gradient text seen in Devyani's headers 
+*/
+.gradient-text {
+  background: linear-gradient(90deg, #800020, #a31d1d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* FIX FOR THE BLANK SPACE:
+  Reduced the vertical padding significantly (from 5rem/6rem down to 2.5rem/3.5rem)
+  so your content components sit closer together instead of looking empty.
+*/
+.section-padding {
+  padding: 2.5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 3.5rem 4rem;
+  }
+}
+
+/* Reconfigured the glassmorphism to look crisp on a light background.
+  It now applies a subtle off-white overlay with a soft light-gray border.
+*/
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Scrollbar customized to match the new deep maroon/red accent colors */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #800020;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #f7fafc;
+}
